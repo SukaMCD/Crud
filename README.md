@@ -2,30 +2,22 @@
 
 Proyek ini adalah implementasi sederhana dari CRUD (Create, Read, Update, Delete) menggunakan PHP dan MySQL. Terdapat tiga kategori utama dalam sistem ini:
 
-Kategori
-
-Produk
-
-User
+- **Kategori**
+- **Produk**
+- **User**
 
 Setiap kategori memiliki fitur CRUD lengkap dengan struktur file sebagai berikut:
 
-index.php - Menampilkan daftar data
+- `index.php` - Menampilkan daftar data
+- `tambah.php` - Form untuk menambah data baru
+- `tambah_aksi.php` - Proses penyimpanan data ke database
+- `edit.php` - Form untuk mengedit data
+- `edit_aksi.php` - Proses update data ke database
+- `hapus.php` - Menghapus data dari database
+- `koneksi.php` - File koneksi ke database
 
-tambah.php - Form untuk menambah data baru
-
-tambah_aksi.php - Proses penyimpanan data ke database
-
-edit.php - Form untuk mengedit data
-
-edit_aksi.php - Proses update data ke database
-
-hapus.php - Menghapus data dari database
-
-koneksi.php - File koneksi ke database
-
-Struktur Folder
-
+## Struktur Folder
+```
 - crud/
   - kategori/
     - index.php
@@ -51,20 +43,19 @@ Struktur Folder
     - edit_aksi.php
     - hapus.php
     - koneksi.php
+```
 
-Database
+## Database
+Proyek ini menggunakan database bernama `crud`. Pastikan untuk membuat database dengan nama yang sama dan menyesuaikan koneksi database di file `koneksi.php`.
 
-Proyek ini menggunakan database bernama crud. Pastikan untuk membuat database dengan nama yang sama dan menyesuaikan koneksi database di file koneksi.php.
-
+```sql
 CREATE DATABASE crud;
 USE crud;
 
-'''sh
 CREATE TABLE kategori (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama_kategori VARCHAR(255) NOT NULL
 );
-'''
 
 CREATE TABLE produk (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -83,23 +74,21 @@ CREATE TABLE user (
     password VARCHAR(255) NOT NULL,
     level VARCHAR(255) NOT NULL
 );
+```
 
-Cara Menggunakan
+## Cara Menggunakan
+1. Clone repository ini:
+   ```sh
+   git clone https://github.com/SukaMCD/crud.git
+   ```
+2. Buat database `crud` dan jalankan script SQL di atas.
+3. Pastikan server lokal (XAMPP, LAMP, atau WAMP) sudah aktif.
+4. Sesuaikan konfigurasi `koneksi.php` dengan kredensial database.
+5. Jalankan di browser dengan mengakses `http://localhost/crud/kategori/`, `http://localhost/crud/produk/`, atau `http://localhost/crud/user/`.
 
-Clone repository ini:
-
-git clone https://github.com/username/repository.git
-
-Buat database crud dan jalankan script SQL di atas.
-
-Pastikan server lokal (XAMPP, LAMP, atau WAMP) sudah aktif.
-
-Sesuaikan konfigurasi koneksi.php dengan kredensial database.
-
-Jalankan di browser dengan mengakses http://localhost/crud/kategori/, http://localhost/crud/produk/, atau http://localhost/crud/user/.
-
-Lisensi
-
+## Lisensi
 Proyek ini bebas digunakan dan dimodifikasi sesuai kebutuhan.
 
-Dibuat oleh Fabian (SukaMCD)
+---
+Dibuat oleh **Fabian (SukaMCD)**
+
