@@ -1,4 +1,4 @@
-#CRUD PHP
+# CRUD PHP
 
 Proyek ini adalah implementasi sederhana dari CRUD (Create, Read, Update, Delete) menggunakan PHP dan MySQL. Terdapat tiga kategori utama dalam sistem ini:
 
@@ -59,10 +59,12 @@ Proyek ini menggunakan database bernama crud. Pastikan untuk membuat database de
 CREATE DATABASE crud;
 USE crud;
 
+'''sh
 CREATE TABLE kategori (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nama_kategori VARCHAR(255) NOT NULL
 );
+'''
 
 CREATE TABLE produk (
     id INT AUTO_INCREMENT PRIMARY KEY,
