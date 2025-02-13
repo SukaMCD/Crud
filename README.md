@@ -62,8 +62,8 @@ CREATE TABLE produk (
     nama_barang VARCHAR(255) NOT NULL,
     deskripsi TEXT NOT NULL,
     stok INT NOT NULL,
-    harga VARCHAR(255) NOT NULL,
     kategori VARCHAR(255) NOT NULL,
+    harga VARCHAR(255) NOT NULL,
     gambar_produk VARCHAR(255) NOT NULL
 );
 
